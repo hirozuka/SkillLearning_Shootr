@@ -9,14 +9,14 @@ public class SampleDrawing implements Drawing{
 	private Color color = Color.WHITE;
 
 	/**
-	/ コンストラクタ
-	*/
+	 * コンストラクタ
+	 */
 	public SampleDrawing() {
 	}
 
 	/**
-	/ 動作
-	*/
+	 * 動作
+	 */
 	public void move() {
 		y += 5;		// とりあえず、適当に
 	}
