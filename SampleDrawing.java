@@ -1,4 +1,5 @@
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class SampleDrawing implements Drawing{
 
@@ -18,7 +19,7 @@ public class SampleDrawing implements Drawing{
 	/ 動作
 	*/
 	public void move() {
-		y += 5;		// とりあえず、適当に
+		x += 5;		// とりあえず、適当に
 	}
 
 	/**
