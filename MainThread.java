@@ -54,13 +54,19 @@ class MainThread implements Runnable {
 		// パネルに描画オブジェクトを登録
 		panel.addDrawing(sample1);
 
+		// 背景描画オブジェクトの生成し、パネルに登録
+		SpaceBackground spaceBackground = new SpaceBackground();
+		panel.addDrawing(spaceBackground);
+
 		while(true) {
+			// 背景描画オブジェクトを動かす
+			spaceBackground.move();
 			// 描画オブジェクトを動かす
 			sample1.move();
 			// パネルに再描画処理を指示
 			panel.paintImmediately(0, 0, MainPanel.PANEL_WIDTH, MainPanel.PANEL_HEIGHT);
 
-			// 一定時間訂正させる（ms）
+			// 一定時間停止させる（ms）
 			try {
 				thread.sleep(THREAD_SLEEP);
 			} catch (InterruptedException e) {
@@ -68,5 +74,4 @@ class MainThread implements Runnable {
 			}
 		}
 	}
-
 }
