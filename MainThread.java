@@ -1,5 +1,4 @@
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Container;
 
 class MainThread implements Runnable {
 	// スレッドの休止時間（ms）
@@ -50,13 +49,14 @@ class MainThread implements Runnable {
 
 		// サンプル用の描画オブジェクトを生成
 		SampleDrawing sample = new SampleDrawing();
+		EnemyDrawing sample1 = new EnemyDrawing();
+
 		// パネルに描画オブジェクトを登録
-		panel.addDrawing(sample);
+		panel.addDrawing(sample1);
 
 		while(true) {
 			// 描画オブジェクトを動かす
-			sample.move();
-
+			sample1.move();
 			// パネルに再描画処理を指示
 			panel.paintImmediately(0, 0, MainPanel.PANEL_WIDTH, MainPanel.PANEL_HEIGHT);
 
